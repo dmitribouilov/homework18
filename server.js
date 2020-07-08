@@ -15,7 +15,7 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect( "mongodb+srv://dimonya:eblan1@dmitricluster-ke366.mongodb.net/budget?retryWrites=true&w=majority", { useNewUrlParser: true, useFindAndModify: false});
+mongoose.connect( process.env.MONGODB_URI, { useNewUrlParser: true, useFindAndModify: false});
 
 
 //mongoose.connect("mongodb://localhost/budget", {
